@@ -5,6 +5,9 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'haml'
 gem 'jquery-rails'
 
+# Authentication
+gem 'devise', :git => "git://github.com/JohnPlummer/devise.git"
+
 group :development, :test do
 	gem 'rspec-rails'
 	gem 'cucumber-rails'
@@ -19,4 +22,7 @@ group :development, :test do
 	gem 'factory_girl_rails'
 	gem 'annotate-models'
 	gem 'haml-rails'
+
+	gem 'hpricot'
+	gem 'ruby_parser'
 end

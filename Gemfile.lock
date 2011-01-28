@@ -1,3 +1,12 @@
+GIT
+  remote: git://github.com/JohnPlummer/devise.git
+  revision: 9d58f64b56aed4343038e5eae3698a75e297c980
+  specs:
+    devise (1.2.rc)
+      bcrypt-ruby (~> 2.1.2)
+      orm_adapter (~> 0.0.3)
+      warden (~> 1.0.3)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -35,6 +44,7 @@ GEM
     autotest-growl (0.2.9)
     autotest-rails-pure (4.1.2)
     autotest-standalone (4.5.4)
+    bcrypt-ruby (2.1.4)
     builder (2.1.2)
     capybara (0.4.1.1)
       celerity (>= 0.7.9)
@@ -75,6 +85,7 @@ GEM
       activesupport (~> 3.0)
       haml (~> 3.0)
       railties (~> 3.0)
+    hpricot (0.8.3)
     i18n (0.5.0)
     jquery-rails (0.2.6)
       rails (~> 3.0)
@@ -91,6 +102,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.16)
     nokogiri (1.4.4)
+    orm_adapter (0.0.4)
     polyglot (0.3.1)
     rack (1.2.1)
     rack-mount (0.6.13)
@@ -124,12 +136,15 @@ GEM
       activesupport (~> 3.0)
       railties (~> 3.0)
       rspec (~> 2.4.0)
+    ruby_parser (2.0.5)
+      sexp_processor (~> 3.0)
     rubyzip (0.9.4)
     selenium-webdriver (0.1.2)
       childprocess (~> 0.1.5)
       ffi (~> 0.6.3)
       json_pure
       rubyzip
+    sexp_processor (3.0.5)
     shoulda (2.11.3)
     spork (0.8.4)
     sqlite3 (1.3.3)
@@ -141,6 +156,8 @@ GEM
     treetop (1.4.9)
       polyglot (>= 0.3.1)
     tzinfo (0.3.24)
+    warden (1.0.3)
+      rack (>= 1.0.0)
     xpath (0.1.3)
       nokogiri (~> 1.3)
 
@@ -155,13 +172,16 @@ DEPENDENCIES
   autotest-standalone
   capybara
   cucumber-rails
+  devise!
   factory_girl_rails
   haml
   haml-rails
+  hpricot
   jquery-rails
   launchy
   rails (= 3.0.3)
   rspec-rails
+  ruby_parser
   shoulda
   spork
   sqlite3-ruby
