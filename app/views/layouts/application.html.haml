@@ -8,4 +8,8 @@
   %body
     %p.notice #{notice}
     %p.alert #{alert}
+    .user_nav
+      - if current_user
+        #{current_user.username} |
+        Sign Out
     = yield
