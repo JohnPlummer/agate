@@ -1,6 +1,6 @@
 GIT
-  remote: git://github.com/JohnPlummer/devise.git
-  revision: 9d58f64b56aed4343038e5eae3698a75e297c980
+  remote: git://github.com/plataformatec/devise.git
+  revision: c9fe8885f92093065a58ca26b7aafea30875ee2d
   specs:
     devise (1.2.rc)
       bcrypt-ruby (~> 2.1.2)

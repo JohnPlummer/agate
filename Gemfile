@@ -6,7 +6,7 @@ gem 'haml'
 gem 'jquery-rails'
 
 # Authentication
-gem 'devise', :git => "git://github.com/JohnPlummer/devise.git"
+gem 'devise', :git => "git://github.com/plataformatec/devise.git"
 
 group :development, :test do
 	gem 'rspec-rails'

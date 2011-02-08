@@ -7,11 +7,11 @@ Feature: Authentication
   Scenario: User not signed in
     Given I am not signed in
     When I go to the home page
-    Then I should be redirected to the sign in page
+    Then I should see "Sign up"
 
   Scenario: Register new user
     Given I am on the sign up page
-    And I fill in the following:
+    And I fill in the following within "form#user_new":
       | Username              | Fred         |
       | Email                 | fred@foo.bar |
       | Password              | password     |
@@ -23,15 +23,17 @@ Feature: Authentication
     And I should receive an email with the following details:
       | subject                   | body                                                |
       | Confirmation instructions | You can confirm your account through the link below |
-    And I should be on the sign in page
-#    And pending response from devise devs, I should see "You have signed up successfully."
+    And I should be on the home page
+    And I should see "You have signed up successfully. However, we could not sign you in because your account is unconfirmed."
 
   Scenario: Sign in user
-    Given I am a registered user
-    And I am on the sign in page
+    Given I am not signed in
+    And I am a registered user
+    And I am on the home page
+    Then show me the page
     And I fill in the following:
-      | Username | Fred     |
-      | Password | password |
+      | user[username] | Fred     |
+      | user[password] | password |
     When I press "Sign in"
     Then I should be on the home page
     And I should see "fred"
@@ -40,7 +42,7 @@ Feature: Authentication
   Scenario: User forgets password
     Given I am a registered user
     And I am on the reset password page
-    And I fill in the following:
+    And I fill in the following within "form#user_new":
       | Username | Fred |
     When I press "Send me reset password instructions"
     Then I should receive an email with the following details:
