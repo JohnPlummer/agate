@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(:version => 20110128191642) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "username",                            :default => "", :null => false
+    t.string   "display_username",                    :default => "", :null => false
   end
 
   add_index "users", ["confirmation_token"], :name => "index_users_on_confirmation_token", :unique => true

@@ -10,7 +10,7 @@
     %p.alert #{alert}
     .user_nav
       - if current_user
-        #{current_user.username} |
+        #{current_user} |
         Sign Out
       - else
         = form_tag new_user_session_path do

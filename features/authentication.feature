@@ -30,13 +30,12 @@ Feature: Authentication
     Given I am not signed in
     And I am a registered user
     And I am on the home page
-    Then show me the page
     And I fill in the following:
       | user[username] | Fred     |
       | user[password] | password |
     When I press "Sign in"
     Then I should be on the home page
-    And I should see "fred"
+    And I should see "Fred"
     And I should see "Signed in successfully."
 
   Scenario: User forgets password
