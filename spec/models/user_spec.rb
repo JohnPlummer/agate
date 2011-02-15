@@ -34,7 +34,6 @@ describe User do
 		end
 
 		specify { @user.should be_valid }
-
 		specify { @user.display_username.should == 'Fred' }
 		specify { @user.username.should == 'fred' }
 

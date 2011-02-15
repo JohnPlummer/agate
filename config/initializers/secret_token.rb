@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Agate::Application.config.secret_token = '19a7e19c86c451524e56ad8a163f88c00949aed87b9430d9eec7a5c2ad297bd79331dc1f6e8e27cd10dd22ab87e2724b9bd6c7233d1ef54b5c492d366d99d107'
+Agate::Application.config.secret_token = '7b017e3a214d50d561cb2460d404ea5bcb51d24785abccf41414e5b57b523d232d1bb0e79e5a923fc34b9ee515187ec0b9636cfe8c2f5cfd0bce9cd78caf882d'
